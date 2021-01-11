@@ -37,8 +37,8 @@ public class DashboardPlugin extends Plugin {
       updatePlayers();
     })
     
-    Events.on(MapMakeEvent)
-    Events.on(MapPublishEvent)
+    Events.on(MapMakeEvent);
+    Events.on(MapPublishEvent);
 
   }
 
