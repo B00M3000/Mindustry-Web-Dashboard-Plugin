@@ -35,7 +35,7 @@ public class DashboardPlugin extends Plugin {
     });
     Events.on(PlayerLeave.class, event -> {
       updatePlayers();
-    })
+    });
     
     Events.on(MapMakeEvent);
     Events.on(MapPublishEvent);
@@ -47,7 +47,7 @@ public class DashboardPlugin extends Plugin {
   public void registerServerCommands(CommandHandler handler){
     handler.register("update-dashboard", "Sends all server data to online dashboard.", args -> {
       EntityGroup<Player> players = Groups.player;
-      struct.Seq<Map> maps = maps.all()
+      struct.Seq<Map> maps = maps.all();
     });
   }
 
