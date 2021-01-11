@@ -1,0 +1,7 @@
+{
+  "name": "DashboardPlugin",
+  "author": "MochaBoom",
+  "main": "DashboardPlugin",
+  "description": "A plugin to communicate with a dashboard web server.",
+  "version": 1.0
+}
