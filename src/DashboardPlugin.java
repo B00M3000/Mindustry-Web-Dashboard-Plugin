@@ -3,6 +3,7 @@ package example;
 // Mindustry Imports
 import arc.*;
 import arc.util.*;
+import arc.struct.*;
 import mindustry.*;
 import mindustry.content.*;
 import mindustry.game.EventType.*;
@@ -47,7 +48,7 @@ public class DashboardPlugin extends Plugin {
   public void registerServerCommands(CommandHandler handler){
     handler.register("update-dashboard", "Sends all server data to online dashboard.", args -> {
       EntityGroup<Player> players = Groups.player;
-      struct.Seq<Map> maps = maps.all();
+      Seq<Map> maps = maps.all();
     });
   }
 
@@ -67,7 +68,7 @@ public class DashboardPlugin extends Plugin {
     return json;
   }
 
-  public static String updateMap(Strin name, String author) throws IOException {
+  public static String updateMap(String name, String author) throws IOException {
     String data = String.format("{ \"name\": \"%s\", \"author\": \"%s\" }", name, author);
     String json = requestJSON("map-update", data);
    return  post(json);
